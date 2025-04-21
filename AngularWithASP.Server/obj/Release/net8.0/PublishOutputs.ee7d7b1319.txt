@@ -1,0 +1,12 @@
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\AngularWithASP.Server.exe
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\AngularWithASP.Server.dll
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\AngularWithASP.Server.deps.json
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\AngularWithASP.Server.runtimeconfig.json
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\AngularWithASP.Server.pdb
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\colto\source\repos\AngularWithASP\AngularWithASP.Server\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

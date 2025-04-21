@@ -1,0 +1,1 @@
+C:\Users\colto\source\repos\AngularWithASP\angularwithasp.client\obj\Release\angularwithasp.client.esproj.CoreCompileInputs.cache

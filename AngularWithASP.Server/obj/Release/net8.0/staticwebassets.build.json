@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "UYNW6IUIx8teLOG1sco4ForWcYjt81VSMpxYJ1pf8MI=",
+  "Source": "AngularWithASP.Server",
+  "BasePath": "_content/AngularWithASP.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\colto\\source\\repos\\AngularWithASP\\angularwithasp.client\\angularwithasp.client.esproj",
+      "Version": 2,
+      "Source": "angularwithasp.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

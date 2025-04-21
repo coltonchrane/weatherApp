@@ -1,0 +1,1 @@
+C:\Users\colto\source\repos\weatherApp\angularwithasp.client\obj\Debug\weatherApp.client.esproj.CoreCompileInputs.cache

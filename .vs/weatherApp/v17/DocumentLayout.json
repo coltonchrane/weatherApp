@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\colto\\source\\repos\\weatherApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|c:\\users\\colto\\source\\repos\\weatherapp\\angularwithasp.client\\angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|solutionrelative:angularwithasp.client\\angular.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|c:\\users\\colto\\source\\repos\\weatherapp\\angularwithasp.client\\aspnetcore-https.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|solutionrelative:angularwithasp.client\\aspnetcore-https.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|c:\\users\\colto\\source\\repos\\weatherapp\\angularwithasp.client\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|solutionrelative:angularwithasp.client\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|c:\\users\\colto\\source\\repos\\weatherapp\\angularwithasp.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{81E8F399-CE24-4AB6-895B-8FACD7799F2E}|angularwithasp.client\\weatherApp.client.esproj|solutionrelative:angularwithasp.client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "angular.json",
+              "DocumentMoniker": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\angular.json",
+              "RelativeDocumentMoniker": "angularwithasp.client\\angular.json",
+              "ToolTip": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\angular.json",
+              "RelativeToolTip": "angularwithasp.client\\angular.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-21T23:52:48.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "aspnetcore-https.js",
+              "DocumentMoniker": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\aspnetcore-https.js",
+              "RelativeDocumentMoniker": "angularwithasp.client\\aspnetcore-https.js",
+              "ToolTip": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\aspnetcore-https.js",
+              "RelativeToolTip": "angularwithasp.client\\aspnetcore-https.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-21T23:52:47.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\tsconfig.json",
+              "RelativeDocumentMoniker": "angularwithasp.client\\tsconfig.json",
+              "ToolTip": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\tsconfig.json",
+              "RelativeToolTip": "angularwithasp.client\\tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-21T23:52:43.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\package.json",
+              "RelativeDocumentMoniker": "angularwithasp.client\\package.json",
+              "ToolTip": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\package.json",
+              "RelativeToolTip": "angularwithasp.client\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-21T23:52:43.243Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "Wq+tKct4K+PmCn06lGDDWXBcJqox5B2R3Lx+qIuhRLQ=",
+  "Source": "weatherApp.Server",
+  "BasePath": "_content/weatherApp.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\colto\\source\\repos\\weatherApp\\angularwithasp.client\\weatherApp.client.esproj",
+      "Version": 2,
+      "Source": "weatherApp.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
