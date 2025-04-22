@@ -38,3 +38,4 @@ C:\Users\colto\source\repos\weatherApp\AngularWithASP.Server\obj\Debug\net8.0\re
 C:\Users\colto\source\repos\weatherApp\AngularWithASP.Server\obj\Debug\net8.0\weatherApp.Server.pdb
 C:\Users\colto\source\repos\weatherApp\AngularWithASP.Server\obj\Debug\net8.0\weatherApp.Server.genruntimeconfig.cache
 C:\Users\colto\source\repos\weatherApp\AngularWithASP.Server\obj\Debug\net8.0\ref\weatherApp.Server.dll
+C:\Users\colto\source\repos\weatherApp\AngularWithASP.Server\obj\Debug\net8.0\weatherApp.Server.sourcelink.json
