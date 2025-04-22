@@ -18,10 +18,10 @@ jobs:
       - name: Rebuild Solution
         run: dotnet build --configuration Release
       - name: Turn off web server
-        run: Stop-IISSite -Name "weather"
+        run: Stop-Service W3SVC
       - name: Publish
         run: dotnet publish -o C:/CTC-PCVM/weatherApp/
       - name: Migrate Angular App to Site Directory
         run: Copy-Item -Path "runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse
       - name: Start web server
-        run: Start-IISSite -Name "weather"
+        run: Start-Service W3SVC
