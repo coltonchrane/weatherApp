@@ -1,7 +1,63 @@
-################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+.vs/
+*.user
+*.suo
+*.cache
+*.ilk
+*.pdb
+*.obj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
 
-/.vs/weatherApp/FileContentIndex/3e048c39-62b7-4a47-a887-48fe82baae49.vsidx
-/.vs/weatherApp/v17/.suo
-.vs/weatherApp/DesignTimeBuild/.dtbcache.v2
+# Build results
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.app
+*.ipa
+*.dSYM/
+*.stackdump
+
+# Package files
+*.nupkg
+*.snupkg
+*.tar.*
+*.zip
+*.7z
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript build artifacts
+*.tsbuildinfo
+dist/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# HTML/CSS specific
+*.swp
+*.swo
+*.sass-cache
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Tailwind CSS
+tailwind.config.js
+tailwind.config.ts
+
