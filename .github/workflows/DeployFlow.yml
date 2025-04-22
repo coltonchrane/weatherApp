@@ -14,4 +14,4 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Rebuild Solution
-        uses: dotnet build --configuration Release -o C:/CTC-PCVM/weatherApp/
+        run: dotnet build --configuration Release -o C:/CTC-PCVM/weatherApp/
