@@ -6,7 +6,7 @@ on:
       -main
   
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: self-hosted
@@ -16,4 +16,6 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - name: Rebuild Solution
-        run: dotnet build --configuration Release -o C:/CTC-PCVM/weatherApp/
+        run: dotnet build --configuration Release
+      - name: Publish
+        run: fotnet publish -o C:/CTC-PCVM/weatherApp/
