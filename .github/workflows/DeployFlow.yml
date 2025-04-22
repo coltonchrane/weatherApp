@@ -8,24 +8,23 @@ on:
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
-  build:
     runs-on: self-hosted
     steps:
-      - name: PR Merged
-        run: echo PR has been merged. Deploying application...
-      - name: Checkout Branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-      - name: Build Weather Project
-        run: dotnet build --configuration Release
-      - name: Turn off web server
-        run: Stop-Service W3SVC
-      - name: Publish Weather API to Server
-        run: dotnet publish -o C:/CTC-PCVM/weatherApp/
-      - name: Wipe wwwroot
-        run: Remove-Item -Path "C:\CTC-PCVM\weatherApp\wwwroot\*" -Recurse -Force
-      - name: Migrate Weather App to Site
-        run: Copy-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse -Force
-      - name: Start web server
-        run: Start-Service W3SVC
+    - name: PR Merged
+      run: echo PR has been merged. Deploying application...
+    - name: Checkout Branch
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.ref }}
+    - name: Build Weather Project
+      run: dotnet build --configuration Release
+    - name: Turn off web server
+      run: Stop-Service W3SVC
+    - name: Publish Weather API to Server
+      run: dotnet publish -o C:/CTC-PCVM/weatherApp/
+    - name: Wipe wwwroot
+      run: Remove-Item -Path "C:\CTC-PCVM\weatherApp\wwwroot\*" -Recurse -Force
+    - name: Migrate Weather App to Site
+      run: Copy-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse -Force
+    - name: Start web server
+      run: Start-Service W3SVC
