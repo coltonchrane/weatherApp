@@ -21,7 +21,9 @@ jobs:
         run: Stop-Service W3SVC
       - name: Publish Weather API to Server
         run: dotnet publish -o C:/CTC-PCVM/weatherApp/
+      - name: Wipe wwwroot
+        run: Remove-Item -Path "C:\CTC-PCVM\weatherApp\wwwroot\*" -Recurse -Force
       - name: Migrate Weather App to Site
-        run: Remove-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Recurse -Force; Copy-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse -Force
+        run: Copy-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse -Force
       - name: Start web server
         run: Start-Service W3SVC
