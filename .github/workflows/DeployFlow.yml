@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
-      - name: Build Angular App
-        run: ng build --configuration=production
+#     - name: Build Angular App
+#       run: ng build --configurationproduction
       - name: Rebuild Solution
         run: dotnet build --configuration Release
       - name: Publish
