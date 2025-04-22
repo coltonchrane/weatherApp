@@ -7,6 +7,11 @@ interface WeatherForecast {
   highTemp: number;
 }
 
+interface Coordinates {
+  latitude: string,
+  longitude: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +19,12 @@ interface WeatherForecast {
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
+  public coord: Coordinates =
+    {
+      latitude: "",
+      longitude: ""
+    };
+  public forecasts!: WeatherForecast[];
 
   constructor(private http: HttpClient) {}
 
@@ -27,12 +37,10 @@ export class AppComponent implements OnInit {
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        let lat = position.coords.latitude.toString();
-        let long = position.coords.longitude.toString();
-        console.log('Your latitude is :' + lat);
-        console.log('Your longitude is :' + long);
+        this.coord.latitude = position.coords.latitude.toString();
+        this.coord.longitude = position.coords.longitude.toString();
 
-        this.getForecasts(lat, long);
+        this.getForecasts(this.coord.latitude, this.coord.longitude);
       },
         this.error,
         options);

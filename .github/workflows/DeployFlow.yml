@@ -18,4 +18,4 @@ jobs:
       - name: Rebuild Solution
         run: dotnet build --configuration Release
       - name: Publish
-        run: fotnet publish -o C:/CTC-PCVM/weatherApp/
+        run: dotnet publish -o C:/CTC-PCVM/weatherApp/
