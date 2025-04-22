@@ -1,0 +1,17 @@
+name: Weather App Deploy
+
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+      - name: Rebuild Solution
+        uses: dotnet build --configuration Release -o C:/CTC-PCVM/weatherApp/

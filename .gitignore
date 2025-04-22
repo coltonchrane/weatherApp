@@ -1,6 +1,7 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
 /.vs/weatherApp/FileContentIndex/3e048c39-62b7-4a47-a887-48fe82baae49.vsidx
 /.vs/weatherApp/v17/.suo
+.vs/weatherApp/DesignTimeBuild/.dtbcache.v2
