@@ -61,3 +61,4 @@ Thumbs.db
 tailwind.config.js
 tailwind.config.ts
 
+/.vs/weatherApp/v17/DocumentLayout.backup.json
