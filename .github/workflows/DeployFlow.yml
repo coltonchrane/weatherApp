@@ -22,6 +22,6 @@ jobs:
       - name: Publish
         run: dotnet publish -o C:/CTC-PCVM/weatherApp/
       - name: Migrate Angular App to Site Directory
-        run: Copy-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse -Force
+        run: Remove-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Recurse -Force && Copy-Item -Path "C:\actions-runner\_work\weatherApp\weatherApp\angularwithasp.client\dist\weatherApp.client\browser\*" -Destination "C:\CTC-PCVM\weatherApp\wwwroot\" -Recurse -Force
       - name: Start web server
         run: Start-Service W3SVC
