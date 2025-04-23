@@ -7,8 +7,8 @@ on:
   
 jobs:
   pr_merged:
-    runs-on: self-hosted
     if: github.event.pull_request.merged == true
+    runs-on: self-hosted
     steps:
     - name: PR Merged
       run: echo PR has been merged. Deploying application...
