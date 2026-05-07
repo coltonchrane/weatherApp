@@ -53,7 +53,13 @@ jobs:
       - name: Package Frontend into Backend
         run: |
           mkdir -p publish/wwwroot
-          cp -r angularwithasp.client/dist/weatherApp.client/browser/* publish/wwwroot/
+          # Find the directory containing index.html and copy its contents
+          # This handles variations in Angular output paths (dist/app/ or dist/app/browser/)
+          SEARCH_PATH="angularwithasp.client/dist"
+          export TARGET_DIR=$(find $SEARCH_PATH -name "index.html" -printf '%h' | head -n 1)
+          echo "Found Angular index.html at: $TARGET_DIR"
+          if [ -z "$TARGET_DIR" ]; then echo "Error: index.html not found in $SEARCH_PATH"; exit 1; fi
+          cp -r $TARGET_DIR/* publish/wwwroot/
 
       - name: 'Verify Secrets'
         run: |
