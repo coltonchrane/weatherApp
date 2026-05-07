@@ -1,31 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\colto\\source\\repos\\weatherApp\\AngularWithASP.Server\\weatherApp.Server.csproj": {}
+    "/home/colton/Repos/weatherApp/AngularWithASP.Server/weatherApp.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\colto\\source\\repos\\weatherApp\\AngularWithASP.Server\\weatherApp.Server.csproj": {
+    "/home/colton/Repos/weatherApp/AngularWithASP.Server/weatherApp.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colto\\source\\repos\\weatherApp\\AngularWithASP.Server\\weatherApp.Server.csproj",
+        "projectUniqueName": "/home/colton/Repos/weatherApp/AngularWithASP.Server/weatherApp.Server.csproj",
         "projectName": "weatherApp.Server",
-        "projectPath": "C:\\Users\\colto\\source\\repos\\weatherApp\\AngularWithASP.Server\\weatherApp.Server.csproj",
-        "packagesPath": "C:\\Users\\colto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colto\\source\\repos\\weatherApp\\AngularWithASP.Server\\obj\\",
+        "projectPath": "/home/colton/Repos/weatherApp/AngularWithASP.Server/weatherApp.Server.csproj",
+        "packagesPath": "/home/colton/.nuget/packages/",
+        "outputPath": "/home/colton/Repos/weatherApp/AngularWithASP.Server/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\colto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/colton/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -74,6 +69,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[8.0.25, 8.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.25, 8.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
