@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\colto\\source\\repos\\weatherApp\\AngularWithASP.Server\\..\\angularwithasp.client",
+"WorkingDirectory": "/home/colton/Repos/weatherApp/AngularWithASP.Server/../angularwithasp.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

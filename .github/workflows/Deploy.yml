@@ -1,0 +1,83 @@
+name: Unified Deployment
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Deployment Target'
+        required: true
+        default: 'azure'
+        type: choice
+        options:
+          - azure
+          - proxmox
+
+jobs:
+  deploy:
+    # Use the appropriate runner based on the target
+    runs-on: ${{ (github.event.inputs.target == 'proxmox' || (github.event_name == 'push' && false)) && 'self-hosted' || 'ubuntu-latest' }}
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: dotnet/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # --- BUILD PHASE (Common for both) ---
+      - name: Install Frontend Dependencies
+        run: |
+          cd angularwithasp.client
+          npm install
+
+      - name: Build Frontend
+        run: |
+          cd angularwithasp.client
+          npm run build -- --configuration production
+
+      - name: Build & Publish Backend
+        run: |
+          cd AngularWithASP.Server
+          dotnet publish -c Release -o ../publish --runtime linux-x64 --self-contained true
+
+      - name: Package Frontend into Backend
+        run: |
+          mkdir -p publish/wwwroot
+          cp -r angularwithasp.client/dist/weatherApp.client/browser/* publish/wwwroot/
+
+      # --- DEPLOY PHASE: AZURE ---
+      - name: Deploy to Azure Web App
+        if: github.event.inputs.target == 'azure' || github.event_name == 'push'
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ./publish
+
+      # --- DEPLOY PHASE: PROXMOX (Local IIS) ---
+      - name: Stop IIS (W3SVC)
+        if: github.event.inputs.target == 'proxmox'
+        run: Stop-Service W3SVC
+        shell: powershell
+
+      - name: Deploy to Local Path
+        if: github.event.inputs.target == 'proxmox'
+        run: |
+          Remove-Item -Path "C:\CTC-PCVM\weatherApp\*" -Recurse -Force
+          Copy-Item -Path "publish\*" -Destination "C:\CTC-PCVM\weatherApp\" -Recurse -Force
+        shell: powershell
+
+      - name: Start IIS (W3SVC)
+        if: github.event.inputs.target == 'proxmox'
+        run: Start-Service W3SVC
+        shell: powershell

@@ -57,6 +57,9 @@ Thumbs.db
 .env.local
 .env.*.local
 
+# ASP.NET Core secrets and overrides
+appsettings.Development.json
+
 # Tailwind CSS
 tailwind.config.js
 tailwind.config.ts

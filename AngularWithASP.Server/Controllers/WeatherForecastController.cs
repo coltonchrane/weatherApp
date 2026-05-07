@@ -11,16 +11,19 @@ namespace weatherApp.Server.Controllers
 	public class WeatherForecastController : ControllerBase
 	{
 		private readonly ILogger<WeatherForecastController> _logger;
+		private readonly IConfiguration _configuration;
 
-		public WeatherForecastController(ILogger<WeatherForecastController> logger)
+		public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration)
 		{
 			_logger = logger;
+			_configuration = configuration;
 		}
 
 		[HttpGet(Name = "GetWeatherForecast")]
 		public WeatherPage Get([FromQuery] string lon, [FromQuery] string lat)
 		{
-			var service = new WeatherService(lon, lat);
+			var apiKey = _configuration["Geocoding:ApiKey"];
+			var service = new WeatherService(lon, lat, apiKey);
 
 			return new WeatherPage
 			{

@@ -34,10 +34,12 @@ namespace weatherApp.Server
 	{
 		private string Longitude;
 		private string Latitude;
-		public WeatherService(string lon, string lat)
+		private string ApiKey;
+		public WeatherService(string lon, string lat, string apiKey)
 		{
 			Longitude = lon;
 			Latitude = lat;
+			ApiKey = apiKey;
 		}
 
 		public List<Weather> GetForecasts()
@@ -67,20 +69,20 @@ namespace weatherApp.Server
 					HighTemp = weatherRaw.HighTemp[i]
 				});
 			}
-			
+
 			return weather;
 		}
 		public string GetLocation()
 		{
-			string apiKey = "6807250aad2a4114525875dxn000837";
 			string url = $"https://geocode.maps.co/reverse?" +
 				$"lat={Latitude}&" +
 				$"lon={Longitude}&" +
-				$"api_key={apiKey}";
+				$"api_key={ApiKey}";
 
 			var response = MakeApiRequest(url);
 			response.EnsureSuccessStatusCode();
 			string responseBody = response.Content.ReadAsStringAsync().Result;
+
 			Console.WriteLine(responseBody);
 
 			var jobject = JObject.Parse(responseBody);
