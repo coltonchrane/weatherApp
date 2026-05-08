@@ -9,6 +9,15 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.Use(async (context, next) =>
+{
+    // Remove X-Frame-Options to allow embedding in iframes
+    context.Response.Headers.Remove("X-Frame-Options");
+    // Alternatively, set CSP frame-ancestors to allow specific domains
+    // context.Response.Headers.Add("Content-Security-Policy", "frame-ancestors 'self' https://your-portfolio-domain.com");
+    await next();
+});
+
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
