@@ -1,20 +1,31 @@
 <h1 id="tableLabel">Weather forecast</h1>
-<p *ngIf="!weather"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
-<p *ngIf="weather.location">{{weather.location}}</p>
 
-<table *ngIf="weather.forecasts">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Low Temp (&deg;F)</th>
-      <th>High Temp (&deg;F)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of weather.forecasts">
-      <td>{{ forecast.time }}</td>
-      <td>{{ forecast.lowTemp }}</td>
-      <td>{{ forecast.highTemp }}</td>
-    </tr>
-  </tbody>
-</table>
+<div *ngIf="isLoading" class="loader-container">
+  <div class="spinner"></div>
+  <p class="loading-text">Getting your location and weather data...</p>
+</div>
+
+<div *ngIf="!isLoading">
+  <p *ngIf="weather.location" class="location-name">{{weather.location}}</p>
+
+  <table *ngIf="weather.forecasts && weather.forecasts.length > 0">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Low Temp (&deg;F)</th>
+        <th>High Temp (&deg;F)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forecast of weather.forecasts">
+        <td>{{ forecast.time }}</td>
+        <td>{{ forecast.lowTemp }}</td>
+        <td>{{ forecast.highTemp }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="!weather.location && !isLoading" class="error-text">
+    Unable to load weather data. Please ensure location services are enabled.
+  </p>
+</div>

@@ -24,13 +24,14 @@ export class AppComponent implements OnInit {
       location: "",
       forecasts: []
     };
+  public isLoading = true;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     const options = {
       enableHighAccuracy: true,
-      timeout: 5000,
+      timeout: 10000,
       maximumAge: 0,
     };
 
@@ -41,8 +42,13 @@ export class AppComponent implements OnInit {
 
         this.getForecasts(latitude, longitude);
       },
-        this.error,
+        (err) => {
+          this.error(err);
+          this.isLoading = false;
+        },
         options);
+    } else {
+      this.isLoading = false;
     }
   }
 
@@ -50,9 +56,11 @@ export class AppComponent implements OnInit {
     this.http.get<WeatherForecast[]>('/weatherforecast?lon='+long+'&lat='+lat).subscribe(
       (result: any) => {
         this.weather = result;
+        this.isLoading = false;
       },
       (error: any) => {
         console.error(error);
+        this.isLoading = false;
       }
     )
   }
