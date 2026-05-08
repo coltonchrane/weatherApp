@@ -48,7 +48,7 @@ jobs:
       - name: Build & Publish Backend
         run: |
           cd AngularWithASP.Server
-          dotnet publish -c Release -o ../publish --runtime win-x64 --self-contained true
+          dotnet publish -c Release -o ../publish --runtime linux-x64 --self-contained true
 
       - name: Package Frontend into Backend
         run: |
@@ -65,6 +65,8 @@ jobs:
           ls -F publish
           echo "Listing wwwroot directory:"
           ls -F publish/wwwroot
+          # Make the binary executable (important for self-contained Linux)
+          chmod +x publish/weatherApp.Server || true
 
       - name: 'Verify Secrets'
         run: |
