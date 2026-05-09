@@ -11,7 +11,7 @@ This application retrieves the user's geolocation via the browser and fetches we
 - **Languages**: C#, TypeScript.
 - **External APIs**: Open-Meteo (Weather), Geocode.maps.co (Geocoding).
 - **Infrastructure**: Docker (Multi-stage builds).
-- **CI/CD**: GitHub Actions (Deployments to Azure Web Apps and local Proxmox-hosted IIS via Tailscale).
+- **CI/CD**: GitHub Actions (Deployments to Azure Web Apps and local Proxmox-hosted IIS via Tailscale). Azure deployments use standard public internet access, while Tailscale provides secure access to the local Proxmox environment.
 
 ### Core Architecture
 - **`AngularWithASP.Server/`**: The ASP.NET Core backend. It acts as a proxy for weather data and serves the Angular static files in production.
