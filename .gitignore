@@ -66,3 +66,6 @@ tailwind.config.ts
 
 /.vs/weatherApp/v17/DocumentLayout.backup.json
 /.vs/weatherApp/v17/DocumentLayout.json
+
+# Gemini CLI instructions
+GEMINI.md
